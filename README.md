@@ -1,6 +1,17 @@
 # Power-Outage-Project-Winter-2024 Test
-This is a project for DSC80 at UCSD.
-I'm testing things. But idk why it dont push
+by Marcus Ruesga (mruesga@ucsd.edu) and Angel Hernandez ()
+
+***Note***: If you choose a repo name and title as uninspired as the ones here, I will be quite sad.
+
+---
+
+## Introduction
+
+In this project, we studied the effectiveness of spice challenges in building team morale.
+
+---
+
+## Cleaning and EDA
 
 <iframe
   src="assets/plot_test.html"
@@ -8,3 +19,16 @@ I'm testing things. But idk why it dont push
   height="600"
   frameborder="0"
 ></iframe>
+
+---
+
+## Assessment of Missingness
+
+Here's what a Markdown table looks like. Note that the code for this table was generated _automatically_ from a DataFrame, using
+
+---
+
+## Hypothesis Testing
+
+
+---
