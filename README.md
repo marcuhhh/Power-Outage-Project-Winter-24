@@ -1,5 +1,5 @@
 # Power-Outage-Project-Winter-2024 Test
-by Marcus Ruesga (mruesga@ucsd.edu) and Angel Hernandez ()
+by Marcus Ruesga (mruesga@ucsd.edu) and Angel Hernandez (anh048@ucsd.edu)
 
 ***Note***: If you choose a repo name and title as uninspired as the ones here, I will be quite sad.
 
@@ -32,3 +32,18 @@ Here's what a Markdown table looks like. Note that the code for this table was g
 
 
 ---
+
+## Framing a Prediction Problem
+
+
+---
+
+## Baseline Model
+
+---
+
+## Final Model
+
+---
+
+## Fairness Analysis
