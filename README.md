@@ -40,6 +40,10 @@ Embed at least one grouped table or pivot table in your website and explain its 
 
 ### Grouped Table/Pivot Table
 
+```py
+print(grouped_table[['Duration Minutes', 'Resident Sales']].to_markdown(index=False))
+```
+
 ---
 
 ## Assessment of Missingness
