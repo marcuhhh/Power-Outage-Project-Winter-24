@@ -12,7 +12,7 @@ Provide an introduction to your dataset, and clearly state the one question your
 
 ---
 
-## Data Cleaning and Exploratory Data Analysis
+## **Data Cleaning and Exploratory Data Analysis**
 
 ### Data Cleaning
 Describe, in detail, the data cleaning steps you took and how they affected your analyses. The steps should be explained in reference to the data generating process. Show the head of your cleaned DataFrame (see Part 2: Report for instructions).
@@ -54,7 +54,7 @@ Embed at least one grouped table or pivot table in your website and explain its 
 
 ---
 
-## Assessment of Missingness
+## **Assessment of Missingness**
 
 State whether you believe there is a column in your dataset that is NMAR. Explain your reasoning and any additional data you might want to obtain that could explain the missingness (thereby making it MAR). Make sure to explicitly use the term “NMAR.”
 
@@ -72,7 +72,7 @@ X
 
 ---
 
-## Hypothesis Testing
+## **Hypothesis Testing**
 
 Clearly state your null and alternative hypotheses, your choice of test statistic and significance level, the resulting 
 p
@@ -88,7 +88,7 @@ Tip: When making writing your conclusions to the statistical tests in this proje
 
 ---
 
-## Framing a Prediction Problem
+## **Framing a Prediction Problem**
 
 Clearly state your prediction problem and type (classification or regression). If you are building a classifier, make sure to state whether you are performing binary classification or multiclass classification. Report the response variable (i.e. the variable you are predicting) and why you chose it, the metric you are using to evaluate your model and why you chose it over other suitable metrics (e.g. accuracy vs. F1-score).
 
@@ -96,7 +96,7 @@ Note: Make sure to justify what information you would know at the “time of pre
 
 ---
 
-## Baseline Model
+## **Baseline Model**
 
 Describe your model and state the features in your model, including how many are quantitative, ordinal, and nominal, and how you performed any necessary encodings. Report the performance of your model and whether or not you believe your current model is “good” and why.
 
@@ -104,7 +104,7 @@ Tip: Make sure to hit all of the points above: many projects in the past have lo
 
 ---
 
-## Final Model
+## **Final Model**
 
 State the features you added and why they are good for the data and prediction task. Note that you can’t simply state “these features improved my accuracy”, since you’d need to choose these features and fit a model before noticing that – instead, talk about why you believe these features improved your model’s performance from the perspective of the data generating process.
 
@@ -114,7 +114,7 @@ Optional: Include a visualization that describes your model’s performance, e.g
 
 ---
 
-## Fairness Analysis
+## **Fairness Analysis**
 
 Clearly state your choice of Group X and Group Y, your evaluation metric, your null and alternative hypotheses, your choice of test statistic and significance level, the resulting 
 p
