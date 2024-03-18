@@ -12,33 +12,30 @@ Provide an introduction to your dataset, and clearly state the one question your
 
 ---
 
-## Cleaning and EDA
+## Data Cleaning and Exploratory Data Analysis
 
+### Data Cleaning
 Describe, in detail, the data cleaning steps you took and how they affected your analyses. The steps should be explained in reference to the data generating process. Show the head of your cleaned DataFrame (see Part 2: Report for instructions).
 
-Embed at least one plotly plot you created in your notebook that displays the distribution of a single column (see Part 2: Report for instructions). Include a 1-2 sentence explanation about your plot, making sure to describe and interpret any trends present. (Your notebook will likely have more visualizations than your website, and that’s fine. Feel free to embed more than one univariate visualization in your website if you’d like, but make sure that each embedded plot is accompanied by a description.)
-
-Embed at least one plotly plot that displays the relationship between two columns. Include a 1-2 sentence explanation about your plot, making sure to describe and interpret any trends present. (Your notebook will likely have more visualizations than your website, and that’s fine. Feel free to embed more than one bivariate visualization in your website if you’d like, but make sure that each embedded plot is accompanied by a description.)
-
-Embed at least one grouped table or pivot table in your website and explain its significance.
-
-### Univariate Plot
+### Univariate Analysis
 <iframe
   src="assets/plot_test.html"
   width="800"
   height="600"
   frameborder="0"
 ></iframe>
+Embed at least one plotly plot you created in your notebook that displays the distribution of a single column (see Part 2: Report for instructions). Include a 1-2 sentence explanation about your plot, making sure to describe and interpret any trends present. (Your notebook will likely have more visualizations than your website, and that’s fine. Feel free to embed more than one univariate visualization in your website if you’d like, but make sure that each embedded plot is accompanied by a description.)
 
-### Bivariate Plot
+### Bivariate Analysis
 <iframe
   src="assets/bivariate_plot.html"
   width="800"
   height="600"
   frameborder="0"
 ></iframe>
+Embed at least one plotly plot that displays the relationship between two columns. Include a 1-2 sentence explanation about your plot, making sure to describe and interpret any trends present. (Your notebook will likely have more visualizations than your website, and that’s fine. Feel free to embed more than one bivariate visualization in your website if you’d like, but make sure that each embedded plot is accompanied by a description.)
 
-### Grouped Table/Pivot Table
+### Interesting Aggregates
 
 |   Duration Minutes |   Resident Sales |
 |-------------------:|-----------------:|
@@ -53,6 +50,7 @@ Embed at least one grouped table or pivot table in your website and explain its 
 |            1481.49 |         77779.5  |
 |             845.4  |          4392.29 |
 
+Embed at least one grouped table or pivot table in your website and explain its significance.
 ---
 
 ## Assessment of Missingness
@@ -82,6 +80,10 @@ p
 Optional: Embed a visualization related to your hypothesis test in your website.
 
 Tip: When making writing your conclusions to the statistical tests in this project, never use language that implies an absolute conclusion; since we are performing statistical tests and not randomized controlled trials, we cannot prove that either hypothesis is 100% true or false.
+
+### Null Hypothesis
+
+### Alternative Hypothesis
 
 ---
 
