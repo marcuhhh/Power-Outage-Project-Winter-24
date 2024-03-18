@@ -22,14 +22,23 @@ Embed at least one plotly plot that displays the relationship between two column
 
 Embed at least one grouped table or pivot table in your website and explain its significance.
 
-### Univariate PLot
-
+### Univariate Plot
 <iframe
   src="assets/plot_test.html"
   width="800"
   height="600"
   frameborder="0"
 ></iframe>
+
+### Bivariate Plot
+<iframe
+  src="assets/bivariate_plot.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+### Grouped Table/Pivot Table
 
 ---
 
