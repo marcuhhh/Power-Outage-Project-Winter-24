@@ -51,6 +51,7 @@ Embed at least one plotly plot that displays the relationship between two column
 |             845.4  |          4392.29 |
 
 Embed at least one grouped table or pivot table in your website and explain its significance.
+
 ---
 
 ## Assessment of Missingness
