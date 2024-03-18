@@ -40,9 +40,18 @@ Embed at least one grouped table or pivot table in your website and explain its 
 
 ### Grouped Table/Pivot Table
 
-```py
-print(grouped_table[['Duration Minutes', 'Resident Sales']].to_markdown(index=False))
-```
+|   Duration Minutes |   Resident Sales |
+|-------------------:|-----------------:|
+|            5603.31 |         52322.1  |
+|            4182.5  |        169785    |
+|            3477.38 |         50381.5  |
+|            3262.58 |         41149.1  |
+|            2960.02 |        193585    |
+|            2934.95 |         27139.8  |
+|            2693.77 |         55724.4  |
+|            1737.99 |         62185.9  |
+|            1481.49 |         77779.5  |
+|             845.4  |          4392.29 |
 
 ---
 
