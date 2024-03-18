@@ -7,6 +7,7 @@ by Marcus Ruesga (mruesga@ucsd.edu) and Angel Hernandez (anh048@ucsd.edu)
 
 ## Introduction
 
+
 Provide an introduction to your dataset, and clearly state the one question your project is centered around. Why should readers of your website care about the dataset and your question specifically? Report the number of rows in the dataset, the names of the columns that are relevant to your question, and descriptions of those relevant columns.
 
 ---
@@ -20,6 +21,8 @@ Embed at least one plotly plot you created in your notebook that displays the di
 Embed at least one plotly plot that displays the relationship between two columns. Include a 1-2 sentence explanation about your plot, making sure to describe and interpret any trends present. (Your notebook will likely have more visualizations than your website, and that’s fine. Feel free to embed more than one bivariate visualization in your website if you’d like, but make sure that each embedded plot is accompanied by a description.)
 
 Embed at least one grouped table or pivot table in your website and explain its significance.
+
+### Univariate PLot
 
 <iframe
   src="assets/plot_test.html"
