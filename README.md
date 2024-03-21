@@ -17,13 +17,13 @@ by Marcus Ruesga (mruesga@ucsd.edu) and Angel Hernandez (anh048@ucsd.edu)
 Describe, in detail, the data cleaning steps you took and how they affected your analyses. The steps should be explained in reference to the data generating process. Show the head of your cleaned DataFrame (see Part 2: Report for instructions).
 
 
-|   Residental Sales | NERC.REGION   |   Residental Percentage |   POPULATION | CAUSE.CATEGORY     | Start Time          | End Time            |   Year | Duration        |   Duration Minutes |
-|-------------------:|:--------------|------------------------:|-------------:|:-------------------|:--------------------|:--------------------|-------:|:----------------|-------------------:|
-|            38881.9 | MRO           |                 35.5491 |      5348119 | severe weather     | 2011-07-01 17:00:00 | 2011-07-03 20:00:00 |   2011 | 2 days 03:00:00 |               3060 |
-|            26449.8 | MRO           |                 30.0325 |      5457125 | intentional attack | 2014-05-11 18:38:00 | 2014-05-11 18:39:00 |   2014 | 0 days 00:01:00 |                  1 |
-|            24454.9 | MRO           |                 28.0977 |      5310903 | severe weather     | 2010-10-26 20:00:00 | 2010-10-28 22:00:00 |   2010 | 2 days 02:00:00 |               3000 |
-|            30858.7 | MRO           |                 31.9941 |      5380443 | severe weather     | 2012-06-19 04:30:00 | 2012-06-20 23:00:00 |   2012 | 1 days 18:30:00 |               2550 |
-|            33814.6 | MRO           |                 33.9826 |      5489594 | severe weather     | 2015-07-18 02:00:00 | 2015-07-19 07:00:00 |   2015 | 1 days 05:00:00 |               1740 |
+|   Residental Sales | NERC.REGION   |   Residental Percentage |   POPULATION | CAUSE.CATEGORY     |   CUSTOMERS.AFFECTED |   RES.CUST.PCT |   IND.CUST.PCT |   YEAR | Start Time          | End Time            |   Year | Duration        |   Duration Minutes |
+|-------------------:|:--------------|------------------------:|-------------:|:-------------------|---------------------:|---------------:|---------------:|-------:|:--------------------|:--------------------|-------:|:----------------|-------------------:|
+|            38881.9 | MRO           |                 35.5491 |      5348119 | severe weather     |                70000 |        88.9448 |       0.411181 |   2011 | 2011-07-01 17:00:00 | 2011-07-03 20:00:00 |   2011 | 2 days 03:00:00 |               3060 |
+|            26449.8 | MRO           |                 30.0325 |      5457125 | intentional attack |                  nan |        88.8335 |       0.37482  |   2014 | 2014-05-11 18:38:00 | 2014-05-11 18:39:00 |   2014 | 0 days 00:01:00 |                  1 |
+|            24454.9 | MRO           |                 28.0977 |      5310903 | severe weather     |                70000 |        88.9206 |       0.392361 |   2010 | 2010-10-26 20:00:00 | 2010-10-28 22:00:00 |   2010 | 2 days 02:00:00 |               3000 |
+|            30858.7 | MRO           |                 31.9941 |      5380443 | severe weather     |                68200 |        88.8954 |       0.422355 |   2012 | 2012-06-19 04:30:00 | 2012-06-20 23:00:00 |   2012 | 1 days 18:30:00 |               2550 |
+|            33814.6 | MRO           |                 33.9826 |      5489594 | severe weather     |               250000 |        88.8216 |       0.367005 |   2015 | 2015-07-18 02:00:00 | 2015-07-19 07:00:00 |   2015 | 1 days 05:00:00 |               1740 |
 
 ### Univariate Analysis
 <iframe
