@@ -45,18 +45,19 @@ Embed at least one plotly plot that displays the relationship between two column
 
 ### Interesting Aggregates
 
-|   Duration Minutes |   Resident Sales |
-|-------------------:|-----------------:|
-|            5603.31 |         52322.1  |
-|            4182.5  |        169785    |
-|            3477.38 |         50381.5  |
-|            3262.58 |         41149.1  |
-|            2960.02 |        193585    |
-|            2934.95 |         27139.8  |
-|            2693.77 |         55724.4  |
-|            1737.99 |         62185.9  |
-|            1481.49 |         77779.5  |
-|             845.4  |          4392.29 |
+
+| NERC.REGION   |   Duration Minutes |   Residential Sales |
+|:--------------|-------------------:|--------------------:|
+| ECAR          |            5603.31 |            52080.5  |
+| FRCC          |            4182.5  |           169785    |
+| RFC           |            2937.92 |            50475.4  |
+| MRO           |            2934.95 |            27110    |
+| NPCC          |            2711.3  |            40712.9  |
+| SPP           |            2693.77 |            57476.5  |
+| TRE           |            2493.26 |           194092    |
+| SERC          |            1601.04 |            62746.5  |
+| WECC          |            1061.04 |            77537.3  |
+| HECO          |             845.4  |             4392.29 |
 
 Embed at least one grouped table or pivot table in your website and explain its significance.
 
