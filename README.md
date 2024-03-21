@@ -86,6 +86,13 @@ Tip: When making writing your conclusions to the statistical tests in this proje
 
 ### Alternative Hypothesis
 
+<iframe
+  src="assets/hypothesis_fig.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
 ---
 
 ## **Framing a Prediction Problem**
