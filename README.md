@@ -28,7 +28,7 @@ Embed at least one plotly plot you created in your notebook that displays the di
 
 ### Bivariate Analysis
 <iframe
-  src="assets/bivariate_plot.html"
+  src="assets/update_bivariateplot.html"
   width="800"
   height="600"
   frameborder="0"
@@ -55,7 +55,26 @@ Embed at least one grouped table or pivot table in your website and explain its 
 ---
 
 ## **Assessment of Missingness**
+<iframe
+  src="assets/missing_plot.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
+<iframe
+  src="assets/notmissing_plot.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+<iframe
+  src="assets/emp_dist_plot.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 State whether you believe there is a column in your dataset that is NMAR. Explain your reasoning and any additional data you might want to obtain that could explain the missingness (thereby making it MAR). Make sure to explicitly use the term “NMAR.”
 
 Present and interpret the results of your missingness permutation tests with respect to your data and question. Embed a plotly plot related to your missingness exploration; ideas include:
