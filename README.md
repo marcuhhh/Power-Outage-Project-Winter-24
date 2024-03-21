@@ -70,7 +70,7 @@ Embed at least one grouped table or pivot table in your website and explain its 
 ></iframe>
 
 <iframe
-  src="assets/emp_dist_plot.html"
+  src="assets/huh.html"
   width="800"
   height="600"
   frameborder="0"
