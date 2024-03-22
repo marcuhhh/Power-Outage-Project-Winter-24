@@ -1,7 +1,6 @@
 # Power Outage Project
 by Marcus Ruesga (mruesga@ucsd.edu) and Angel Hernandez (anh048@ucsd.edu)
 
-***Note***: If you choose a repo name and title as uninspired as the ones here, I will be quite sad.
 
 ---
 
@@ -78,22 +77,16 @@ Embed at least one grouped table or pivot table in your website and explain its 
 ---
 
 ## **Assessment of Missingness**
+
 <iframe
-  src="assets/missing_plot.html"
+  src="assets/mness_plot.html"
   width="800"
   height="600"
   frameborder="0"
 ></iframe>
 
 <iframe
-  src="assets/notmissing_plot.html"
-  width="800"
-  height="600"
-  frameborder="0"
-></iframe>
-
-<iframe
-  src="assets/huh.html"
+  src="assets/est_dist.html"
   width="800"
   height="600"
   frameborder="0"
