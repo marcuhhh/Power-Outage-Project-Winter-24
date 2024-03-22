@@ -36,7 +36,7 @@ Embed at least one plotly plot you created in your notebook that displays the di
 
 ### Bivariate Analysis
 <iframe
-  src="assets/update_bivariateplot.html"
+  src="assets/final_bivar_plot.html"
   width="800"
   height="600"
   frameborder="0"
