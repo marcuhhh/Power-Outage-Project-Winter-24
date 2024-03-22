@@ -92,12 +92,21 @@ For this table we wanted to see any significance in the NERC.REGION in regards t
 
 ## **Assessment of Missingness**
 
+### NMAR Analysis:
+While exploring the dataset we came across a column that had seemingly random NA values. This column was the CAUSE.CATEGORY.DETAILS column. After closer inspection we had decided that the missing mechanism behind this column was NMAR. Our main line of reasoning is that if there are no details for a given cause/ or the details were too difficult to obtain then the value would be left empty. The significance of the details may be small and it might also be left out for that reason. This would then mean the missingness is NMAR as the missingness depends upon the column itself. However if we were to want to test this we would check to see it was MAR by comparing it to the original CAUSE.CATEGORY column.
+
+### Missingness Dependency:
+A key figure we want to find out is what the missingness mechanism of the Duration Minutes column is. If we find a suitable MAR relationship with our column then we may be able to properly impute the missing data. In our testing we wanted to look at the relationship between Duration Minutes and Population. If there's a smaller or large population does this lead to the missingness of the duration column? 
+
+We first made a plot for the distribution of population when the duration column was missing and not missing. The distributions look about the same except for the one outlier under the 8 million population mark. This might be the key to showing the data is MAR.
+
 <iframe
   src="assets/mness_plot.html"
   width="800"
   height="600"
   frameborder="0"
 ></iframe>
+We then needed to complete a permutation test with our test statistic being the K-S statistic. We followed a pretty simple process, where we computed our observed K-S statistic given our original data and then permuted the NERC.REGION column and computed the K-S statistic once more. We permuted the data 500 times and stored each statistic. Below is the distribution of the permuted K-S statistics along with the red line being the observed statistic. 
 
 <iframe
   src="assets/es_dist.html"
@@ -105,35 +114,23 @@ For this table we wanted to see any significance in the NERC.REGION in regards t
   height="600"
   frameborder="0"
 ></iframe>
-State whether you believe there is a column in your dataset that is NMAR. Explain your reasoning and any additional data you might want to obtain that could explain the missingness (thereby making it MAR). Make sure to explicitly use the term “NMAR.”
 
-Present and interpret the results of your missingness permutation tests with respect to your data and question. Embed a plotly plot related to your missingness exploration; ideas include:
-• The distribution of column 
-Y
- when column 
-X
- is missing and the distribution of column 
-Y
- when column 
-X
- is not missing, as was done in Lecture 8.
-• The empirical distribution of the test statistic used in one of your permutation tests, along with the observed statistic.
+From this we can conclude that, with a significance level of 0.05, we fail to reject that the Durations column missingness is dependent on population. Our p-value was just too high and this suggests that the relationship is elsewhere. Through more testing we found that the missingness of the Duration column actually depends on the categorical column of the NERC REGIONS.
 
 ---
 
 ## **Hypothesis Testing**
+Previously we saw that there were some differences in the duration of an outage in regards to the region. Since most outages came from the WECC and RFC regions we wanted to see if one region had longer outage time than the other. To do this we conducted a permutation test.
 
-Clearly state your null and alternative hypotheses, your choice of test statistic and significance level, the resulting 
-p
--value, and your conclusion. Justify why these choices are good choices for answering the question you are trying to answer.
+### Null Hypothesis:
+WECC region has identical power outage duration times to the RFC region
 
-Optional: Embed a visualization related to your hypothesis test in your website.
+### Alternative Hypothesis:
+WECC region has a greater power outage duration than those in the RFC region.
 
-Tip: When making writing your conclusions to the statistical tests in this project, never use language that implies an absolute conclusion; since we are performing statistical tests and not randomized controlled trials, we cannot prove that either hypothesis is 100% true or false.
+### Test Statistic:
+Our test statistic will be the difference in outage duration means for both regions. Since we are using a permutation test we would normally use a statistic that described the difference in the distributions. However since we have the ability to be specific we are able to average the times of each group instead and use that difference as our statistic. It makes our test clear to understand. We chose a significance level of 0.05. There isn't a major reason for this significance level but it is low enough to take into account any small differences we find in our permutation test. After conducting our permutation test we took a look at our distribution of the difference in mean times between regions, shown below.
 
-### Null Hypothesis
-
-### Alternative Hypothesis
 
 <iframe
   src="assets/hypothesis_fig.html"
@@ -141,36 +138,40 @@ Tip: When making writing your conclusions to the statistical tests in this proje
   height="600"
   frameborder="0"
 ></iframe>
+We calculated the p-value based off of the above distribution and got a value of 0.00.
+Since this value is less than 0.05 we are able to reject the null hypothesis in favor of the alternative.
+
 
 ---
 
 ## **Framing a Prediction Problem**
+Have you ever been playing Fortnite and the power suddenly goes out? Your immediate thought would be ‘when is this power coming back i have to get back to Fortnite!’. Trust us, we’ve all had these thoughts. Our prediction problem is a regression one and focuses on predicting the amount of time one has to wait till the power outage is over. The response variable will be the Duration Minutes column since this column was created manually and excludes any discrepancies within the given OUTAGE.DURATION column. For our metric we are using RMSE over R^2, seeing that our numbers are quite large and vary significantly the RMSE will give us an idea of how far off the model is and be interpretable.
 
-Clearly state your prediction problem and type (classification or regression). If you are building a classifier, make sure to state whether you are performing binary classification or multiclass classification. Report the response variable (i.e. the variable you are predicting) and why you chose it, the metric you are using to evaluate your model and why you chose it over other suitable metrics (e.g. accuracy vs. F1-score).
-
-Note: Make sure to justify what information you would know at the “time of prediction” and to only train your model using those features. For instance, if we wanted to predict your final exam grade, we couldn’t use your Project 4 grade, because Project 4 is only due after the final exam! Feel free to ask questions if you’re not sure.
 
 ---
 
 ## **Baseline Model**
+Our model uses 5 features: The Cause Category of the event , the respective NERC region, the amount of power is selling for in a given month for the residential sector, and the respective residential/industrial customer percentage. The residential/ industrial customer percentage would be something that fluctuates if it were to be grabbed in the moment. Three numerical columns and two categorical columns. For the model we One Hot Encoded the two categorical columns.
+After fitting the data and predicting values based on the training data and testing data our resulting RMSE values are surprising. The training RMSE (3669.477) is higher than our testing RMSE (3661.377) which is good but a little unexpected. Both RMSE values are above 3000 which seems high, but the response variable, duration, is measured in minutes. So this means that our model is roughly off by 2days, which is quite high given that most of our data points have
+a duration of less than a day but not too bad when considering the much higher outage durations.
+This means our current model doesn't work the best it could, seeing that our RMSE is still pretty high regardless of measurements and can definitely be improved.
 
-Describe your model and state the features in your model, including how many are quantitative, ordinal, and nominal, and how you performed any necessary encodings. Report the performance of your model and whether or not you believe your current model is “good” and why.
-
-Tip: Make sure to hit all of the points above: many projects in the past have lost points for not doing so.
 
 ---
 
 ## **Final Model**
 
-State the features you added and why they are good for the data and prediction task. Note that you can’t simply state “these features improved my accuracy”, since you’d need to choose these features and fit a model before noticing that – instead, talk about why you believe these features improved your model’s performance from the perspective of the data generating process.
-
-Describe the modeling algorithm you chose, the hyperparameters that ended up performing the best, and the method you used to select hyperparameters and your overall model. Describe how your Final Model’s performance is an improvement over your Baseline Model’s performance.
-
-Optional: Include a visualization that describes your model’s performance, e.g. a confusion matrix, if applicable.
+For our final model, to improve accuracy we couldn’t introduce new quantitative features as we had already included features that had any resemblance of a linear relationship with outage duration. We instead focused on looking at these distributions once again and seeing what kind of transformations we can make in order to improve the RMSE of our model. What we believed is that since in each one of our quantitative distributions we have large clusters of data centered at low wait times we and some small clusters surrounding large wait times. We could quantize the data to account for the extremes and also make the data uniform. The goal at this point is to make our predictions smaller as it seems to be overshooting. Quantizing allows us to do so and we applied this transformation to all three quantitative features. The only real hyperparameter we can choose in this situation is the number of quantiles and we set it to the length of the dataset. This makes sense as our data is volatile and although most clusters have low times, in between those clusters are values that are abnormally high and so it is best to get the maximum number of quantiles. After running the new model on the same training and test data we saw a small but noticeable improvement. The training RMSE (3157.560) and testing RMSE (3208.462) are noticeably smaller than the original models RMSE. We improved the accuracy of our model by about 11%. 
 
 ---
 
 ## **Fairness Analysis**
+For our fairness analysis we will have to look for groups not being used in our model such as Year.In this case we will look if our model is worse on the first half of the given years in the dataset (2000-2009) in comparison to the other half (2010 - 2016)
+Our Hypothesis test is as follows:
+Null: The model has identical RMSE for the first half of the years (2000-2009) and the second half (2010-2016)
+Alternative: The model has a higher RMSE for the first half of years (2000-2009) compared to the second half (2010-2016)
+We will run some permutation tests to test our hypothesis. The resulting distribution of RMSE differences between the two groups is shown below.
+
 
 <iframe
   src="assets/fairness_plot.html"
@@ -178,8 +179,8 @@ Optional: Include a visualization that describes your model’s performance, e.g
   height="600"
   frameborder="0"
 ></iframe>
-Clearly state your choice of Group X and Group Y, your evaluation metric, your null and alternative hypotheses, your choice of test statistic and significance level, the resulting 
-p
--value, and your conclusion.
+With a significance value of 0.05 and an obtained p-value of 0.00 we are able to reject the null in favor of the alternative. This means that our model does perform worse in earlier years which is an area we would need to improve. This may be due to multiple reasons, one of which being that we did not take into account inflation when looking at the RES.SALES column. Another might be that the severity of natural disasters might have worsened as a result of global warming. Nonetheless our model is not fair to these two groups and would need to be taken into account.
 
-Optional: Embed a visualization related to your permutation test in your website.
+--- 
+
+## References
