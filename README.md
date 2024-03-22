@@ -7,7 +7,21 @@ by Marcus Ruesga (mruesga@ucsd.edu) and Angel Hernandez (anh048@ucsd.edu)
 
 ## Introduction
 
-
+|Column	                 |Description|
+|---                     |---        |
+|`'RES.SALES'`              |Electricity consumption in the residential sector (megawatt-hour)|
+|`'NERC.REGION'`             |The North American Electric Reliability Corporation (NERC) regions involved in the outage event|
+|`'RES.PERCEN'` |Percentage of residential electricity consumption compared to the total electricity consumption in the state (in %)|
+|`'POPULATION'`     |Population in the U.S. state in a year|
+|`'CAUSE.CATEGORY'` |Categories of all the events causing the major power outages|
+|`'CUSTOMERS.AFFECTED'`       |Number of customers affected by the power outage event|
+|`'RES.CUST.PCT'`         |Percent of residential customers served in the U.S. state (in %)|
+|`'IND.CUST.PCT'`         |Percent of industrial customers served in the U.S. state (in %)|
+|`'YEAR'`         |Indicates the year when the outage event occurred|
+|`'OUTAGE.START.TIME'`       |This variable indicates the time of the day when the outage event started (as reported by the corresponding Utility in the region)|
+|`'OUTAGE.START.DATE'`       |This variable indicates the day of the year when the outage event started (as reported by the corresponding Utility in the region)|
+|`'OUTAGE.RESTORATION.DATE'`       |This variable indicates the day of the year when power was restored to all the customers (as reported by the corresponding Utility in the region)|
+|`'OUTAGE.RESTORATION.TIME'`       |This variable indicates the time of the day when power was restored to all the customers (as reported by the corresponding Utility in the region)|
 
 ---
 
