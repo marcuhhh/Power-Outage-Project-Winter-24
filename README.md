@@ -1,4 +1,4 @@
-# Where'd My Power Go?
+# **Where'd My Power Go?**
 by Angel Hernandez (anh048@ucsd.edu) Marcus Ruesga (mruesga@ucsd.edu)
 
 
