@@ -54,7 +54,7 @@ Our data cleaning started with exploring each column first. With NERC.REGION we 
 The main thing we are concerned about is the distribution of the wait times, so looking at this alone we see that most wait times are less than 1000 minutes,  however we originally noticed extremely high times. After some research we found that the longest power outage within 2000-2016 was no longer than two weeks (24000 minutes). We are going to assume that the data points with times higher than two weeks are faulty and we chose to ignore these data points by dropping them. The resulting distribution of the new times are shown below.
 
 <iframe
-  src="assets/plot_test.html"
+  src="assets/fin_uni.html"
   width="800"
   height="600"
   frameborder="0"
