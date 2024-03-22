@@ -1,4 +1,4 @@
-# Power Outage Project
+# Where'd My Power Go?
 by Angel Hernandez (anh048@ucsd.edu) Marcus Ruesga (mruesga@ucsd.edu)
 
 
@@ -184,3 +184,6 @@ With a significance value of 0.05 and an obtained p-value of 0.00 we are able to
 --- 
 
 ## References
+
+https://www.sciencedirect.com/science/article/pii/S2352340918307182
+https://engineering.purdue.edu/LASCI/research-data/outages
