@@ -86,7 +86,7 @@ Embed at least one grouped table or pivot table in your website and explain its 
 ></iframe>
 
 <iframe
-  src="assets/est_dist.html"
+  src="assets/es_dist.html"
   width="800"
   height="600"
   frameborder="0"
