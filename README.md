@@ -1,10 +1,9 @@
-# Where'd My Power Go?
 by Angel Hernandez (anh048@ucsd.edu) Marcus Ruesga (mruesga@ucsd.edu)
 
 
 ---
 
-## Introduction
+## **Introduction**
 
 The dataset "Major Power Outage Rankings in the U.S." originates from the "Laboratory for Advancing Sustainable Critical Infrastructure" at Purdue University. This dataset received its information from publicly available datasets such as : (i) OE-417 form Schedule 1 published by DOE׳s Office of Electricity Delivery and Energy Reliability [2] (ii) U.S. Energy Information Administration (EIA) [form EIA-826 and EIA-861] [3]; (iii) National Oceanic and Atmospheric Administration (NOAA) and National Climatic Data Center (NCDC) [4]; (iv) U.S. Department of Labor; Bureau of Labor Statistics [5]; (v) U.S. Census Bureau.
 
@@ -168,8 +167,13 @@ For our final model, to improve accuracy we couldn’t introduce new quantitativ
 ## **Fairness Analysis**
 For our fairness analysis we will have to look for groups not being used in our model such as Year.In this case we will look if our model is worse on the first half of the given years in the dataset (2000-2009) in comparison to the other half (2010 - 2016)
 Our Hypothesis test is as follows:
-Null: The model has identical RMSE for the first half of the years (2000-2009) and the second half (2010-2016)
-Alternative: The model has a higher RMSE for the first half of years (2000-2009) compared to the second half (2010-2016)
+
+### Null: 
+The model has identical RMSE for the first half of the years (2000-2009) and the second half (2010-2016)
+
+### Alternative: 
+The model has a higher RMSE for the first half of years (2000-2009) compared to the second half (2010-2016)
+
 We will run some permutation tests to test our hypothesis. The resulting distribution of RMSE differences between the two groups is shown below.
 
 
