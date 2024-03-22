@@ -158,6 +158,12 @@ Optional: Include a visualization that describes your model’s performance, e.g
 
 ## **Fairness Analysis**
 
+<iframe
+  src="assets/fairness_plot.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 Clearly state your choice of Group X and Group Y, your evaluation metric, your null and alternative hypotheses, your choice of test statistic and significance level, the resulting 
 p
 -value, and your conclusion.
